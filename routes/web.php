@@ -1,24 +1,37 @@
 <?php
 
+use App\Http\Controllers\PenyakitController;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
 Route::get('/', function () {
-    return view('welcome');
+	return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
 
-require __DIR__.'/auth.php';
+// bagian route khusus untuk akses yang sudah login
+Route::middleware(['auth'])->group(function () {
+	// halaman dashboard
+	Route::get('/dashboard', function () {
+		return view('dashboard');
+	})->name('dashboard');
+
+	// halaman penyakit
+	Route::get('/dashboard/penyakit', [PenyakitController::class, 'index'])
+		->name('penyakit.index');
+
+	Route::get('/dashboard/penyakit/create', [PenyakitController::class, 'create'])
+		->name('penyakit.create');
+
+	Route::post('/dashboard/penyakit/store', [PenyakitController::class, 'store'])
+		->name('penyakit.store');
+
+
+
+
+	// akhir dari login akses
+});
+
+
+
+require __DIR__ . '/auth.php';
