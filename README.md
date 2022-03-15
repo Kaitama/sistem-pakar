@@ -15,7 +15,7 @@ Aplikasi ini merupakan project Sistem Pakar dengan sekumpulan metode di dalamnya
 5. Jalankan aplikasi Command Prompt (CMD), ketik perintah berikut untuk pindah ke drive D:
 
 ```
-cd D:
+D:
 ```
 
 6. Download dan ekstrak project ini pada drive D komputer.
