@@ -7,33 +7,33 @@ Aplikasi ini merupakan project Sistem Pakar dengan sekumpulan metode di dalamnya
 
 ## Instalasi
 
--   Download aplikasi local server yang mendukung PHP versi 8.0 seperti [XAMPP](https://www.apachefriends.org/download.html) atau [WAMP Server](https://www.wampserver.com/en/download-wampserver-64bits/) untuk sistem operasi Windows.
+1. Download aplikasi local server yang mendukung PHP versi 8.0 seperti [XAMPP](https://www.apachefriends.org/download.html) atau [WAMP Server](https://www.wampserver.com/en/download-wampserver-64bits/) untuk sistem operasi Windows.
 
-1. Download dan install [Composer](https://getcomposer.org/Composer-Setup.exe).
-2. Restart komputer.
-3. Jalankan aplikasi XAMPP Control Panel, klik tombol RUN untuk Apache dan MySQL.
-4. Jalankan aplikasi Command Prompt (CMD), ketik perintah berikut untuk pindah ke drive D:
+2. Download dan install [Composer](https://getcomposer.org/Composer-Setup.exe).
+3. Restart komputer.
+4. Jalankan aplikasi XAMPP Control Panel, klik tombol RUN untuk Apache dan MySQL.
+5. Jalankan aplikasi Command Prompt (CMD), ketik perintah berikut untuk pindah ke drive D:
 
 ```
 cd D:
 ```
 
-5. Download dan ekstrak project ini pada drive D komputer.
-6. Ketik perintah berikut pada CMD untuk masuk ke direktori project:
+6. Download dan ekstrak project ini pada drive D komputer.
+7. Ketik perintah berikut pada CMD untuk masuk ke direktori project:
 
 ```
 cd sistem-pakar
 ```
 
-7. Ketik perintah berikut pada CMD untuk melakukan instalasi paket-paket vendor Laravel:
+8. Ketik perintah berikut pada CMD untuk melakukan instalasi paket-paket vendor Laravel:
 
 ```
 composer install
 ```
 
-8. Buka web browser, ketikkan alamat [http://localhost/phpmyadmin](http://localhost/phpmyadmin) lalu buat database baru dengan nama `pakar`.
-9. Buka folder project `sistem-pakar` pada aplikasi Text Editor [Visual Studio Code](https://code.visualstudio.com/Download) atau [Sublime Text](https://www.sublimetext.com/download).
-10. Ubah nama (rename) file `.env.example` menjadi `.env` lalu edit bagian database seperti berikut:
+9. Buka web browser, ketikkan alamat [http://localhost/phpmyadmin](http://localhost/phpmyadmin) lalu buat database baru dengan nama `pakar`.
+10. Buka folder project `sistem-pakar` pada aplikasi Text Editor [Visual Studio Code](https://code.visualstudio.com/Download) atau [Sublime Text](https://www.sublimetext.com/download).
+11. Ubah nama (rename) file `.env.example` menjadi `.env` lalu edit bagian database seperti berikut:
 
 ```
 DB_CONNECTION=mysql
@@ -44,7 +44,7 @@ DB_USERNAME=root
 DB_PASSWORD=
 ```
 
-11. Ketik perintah berikut pada CMD untuk melakukan instalasi Laravel Breeze (fitur login dan register) serta migrasi tabel user menuju database:
+12. Ketik perintah berikut pada CMD untuk melakukan instalasi Laravel Breeze (fitur login dan register) serta migrasi tabel user menuju database:
 
 ```
 php artisan breeze:install
@@ -52,13 +52,13 @@ npm install && npm run dev
 php artisan migrate
 ```
 
-12. Ketik perintah berikut pada CMD untuk menjalankan server:
+13. Ketik perintah berikut pada CMD untuk menjalankan server:
 
 ```
 php artisan serve
 ```
 
-13. Ketik alamat yang tampil pada CMD menuju web browser untuk melihat tampilan aplikasi ini.
+14. Ketik alamat yang tampil pada CMD menuju web browser untuk melihat tampilan aplikasi ini.
 
 ## Author
 
