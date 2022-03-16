@@ -5,15 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Penyakit extends Model
+class Mbmd extends Model
 {
 	use HasFactory;
 
 	protected $guarded = [];
-
-	// relasi many-to many ke tabel gejalacf
-	public function gejalacfs()
-	{
-		return $this->belongsToMany(Gejalacf::class);
-	}
 }
