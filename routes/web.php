@@ -2,12 +2,17 @@
 
 use App\Http\Controllers\GejalacfController;
 use App\Http\Controllers\PenyakitController;
+use App\Http\Controllers\RulebaseController;
 use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function () {
 	return view('welcome');
-});
+})->name('homepage');
+
+Route::get('/konsultasi/cf', function () {
+	return view('konsultasi.cf');
+})->name('konsultasi.cf');
 
 
 // bagian route khusus untuk akses yang sudah login
@@ -54,6 +59,13 @@ Route::middleware(['auth'])->prefix('dashboard')->group(function () {
 
 	Route::get('/gejala/cf/delete/{id}', [GejalacfController::class, 'delete'])
 		->name('gejala.cf.delete');
+
+
+	// rule base
+	Route::get('/rule/cf', [RulebaseController::class, 'index'])
+		->name('rule.cf.index');
+	Route::post('/rule/cf/sync', [RulebaseController::class, 'sync'])
+		->name('rule.cf.sync');
 
 	// akhir dari login akses
 });

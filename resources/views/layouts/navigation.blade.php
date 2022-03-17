@@ -29,6 +29,12 @@
 						{{ __('Data Gejala') }}
 					</x-nav-link>
 				</div>
+				<!-- Rule CF Links -->
+				<div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+					<x-nav-link :href="route('rule.cf.index')" :active="request()->routeIs('rule.cf.*')">
+						{{ __('Rule Base') }}
+					</x-nav-link>
+				</div>
 				
 				
 			</div>

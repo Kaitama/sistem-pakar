@@ -17,6 +17,7 @@ return new class extends Migration
 			$table->id();
 			$table->string('kode');
 			$table->string('gejala');
+			$table->float('bobot', 8, 3);
 			$table->timestamps();
 		});
 	}

@@ -27,7 +27,7 @@
 						<x-th>Solusi</x-th>
 						<x-th></x-th>
 					</x-slot>
-					@foreach ($penyakits as $k => $penyakit)
+					@forelse ($penyakits as $k => $penyakit)
 					<tr class="bg-white border-b">
 						<x-td>{{ $k + 1 }}</x-td>
 						<x-td>{{ $penyakit->kode }}</x-td>
@@ -38,7 +38,11 @@
 							<x-button-link class="bg-rose-600 text-white" href="{{ route('penyakit.delete', $penyakit->id) }}">Hapus</x-button-link>
 						</x-td>
 					</tr>
-					@endforeach
+					@empty
+					<tr class="bg-white border-b">
+						<x-td colspan="5">Data penyakit masih kosong.</x-td>
+					</tr>
+					@endforelse
 					
 				</x-table>
 			</div>

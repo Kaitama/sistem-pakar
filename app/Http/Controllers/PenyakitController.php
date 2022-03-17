@@ -17,7 +17,7 @@ class PenyakitController extends Controller
 	public function create()
 	{
 		$penyakit = Penyakit::latest()->first();
-		$index_baru = $penyakit->id + 1;
+		$index_baru = ($penyakit->id ?? 0) + 1;
 
 		$kode_penyakit = 'P' . str_pad($index_baru, 3, '0', STR_PAD_LEFT);
 

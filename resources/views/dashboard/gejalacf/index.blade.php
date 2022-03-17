@@ -24,7 +24,7 @@
 						<x-th>No</x-th>
 						<x-th>Kode Gejala</x-th>
 						<x-th>Nama Gejala</x-th>
-						{{-- <x-th>Penyakit</x-th> --}}
+						<x-th>Nilai CF</x-th>
 						<x-th></x-th>
 					</x-slot>
 					@forelse ($gejalacfs as $k => $gejala)
@@ -32,7 +32,7 @@
 						<x-td>{{ $k + 1 }}</x-td>
 						<x-td>{{ $gejala->kode }}</x-td>
 						<x-td>{{ $gejala->gejala }}</x-td>
-						{{-- <x-td>{{ dd($gejala->penyakits['kode']) }}</x-td> --}}
+						<x-td>{{ number_format($gejala->bobot, 3) }}</x-td>
 						<x-td>
 							<x-button-link href="{{ route('gejala.cf.edit', $gejala->id) }}">Ubah</x-button-link>
 							<x-button-link class="bg-rose-600 text-white" href="{{ route('gejala.cf.delete', $gejala->id) }}">Hapus</x-button-link>
@@ -40,7 +40,7 @@
 					</tr>
 					@empty
 					<tr class="bg-white border-b">
-						<x-td colspan="5">Data gejala masih kosong.</x-td>
+						<x-td colspan="6">Data gejala masih kosong.</x-td>
 					</tr>
 					@endforelse
 					

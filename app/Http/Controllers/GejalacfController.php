@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Gejalacf;
 use App\Models\Penyakit;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redis;
 
 class GejalacfController extends Controller
 {
@@ -20,14 +21,13 @@ class GejalacfController extends Controller
 	public function create()
 	{
 
-		$penyakits = Penyakit::all();
-		$gejala = Gejalacf::latest()->first()->with('penyakits');
+		$gejala = Gejalacf::latest()->first();
 		$index_baru = ($gejala->id ?? 0) + 1;
 
-		$kode_gejala = 'P' . str_pad($index_baru, 3, '0', STR_PAD_LEFT);
+		$kode_gejala = 'G' . str_pad($index_baru, 3, '0', STR_PAD_LEFT);
 
 
-		return view('dashboard.gejalacf.create', ['kode' => $kode_gejala, 'penyakits' => $penyakits]);
+		return view('dashboard.gejalacf.create', ['kode' => $kode_gejala]);
 	}
 
 	public function store(Request $request)
@@ -35,10 +35,28 @@ class GejalacfController extends Controller
 		$gejala = Gejalacf::create([
 			'kode'	=> $request->kode,
 			'gejala'	=> $request->gejala,
+			'bobot'	=> $request->bobot,
 		]);
 
-		$gejala->penyakits()->sync($request->penyakit);
+		return redirect()->back();
+	}
 
+	public function edit($id)
+	{
+		$gejala = Gejalacf::find($id);
+
+		return view('dashboard.gejalacf.edit', ['gejala' => $gejala]);
+	}
+
+	public function update($id, Request $request)
+	{
+		Gejalacf::find($id)->update($request->all());
 		return redirect()->route('gejala.cf.index');
+	}
+
+	public function destroy($id)
+	{
+		Gejalacf::find($id)->delete();
+		return back();
 	}
 }
