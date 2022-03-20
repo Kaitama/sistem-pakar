@@ -23,7 +23,7 @@ Aplikasi ini merupakan project Sistem Pakar dengan sekumpulan metode di dalamnya
 D:
 ```
 
-7. Download dan ekstrak project ini pada drive D komputer.
+7. Download dan ekstrak project ini pada drive D komputer, rename folder hasil ekstrak menjadi "sistem-pakar".
 8. Ketik perintah berikut pada CMD untuk masuk ke direktori project:
 
 ```
