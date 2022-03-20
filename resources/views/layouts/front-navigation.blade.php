@@ -13,12 +13,12 @@
 				<!-- Navigation Links -->
 				<div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
 					<x-nav-link :href="route('homepage')" :active="request()->routeIs('homepage')">
-						{{ __('Home Page') }}
+						{{ __('Home') }}
 					</x-nav-link>
 				</div>
 				<!-- Navigation Links -->
 				<div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-					<x-nav-link :href="route('konsultasi.cf')" :active="request()->routeIs('konsultasi.cf')">
+					<x-nav-link :href="route('konsultasi.cf')" :active="request()->routeIs('konsultasi.*')">
 						{{ __('Konsultasi') }}
 					</x-nav-link>
 				</div>
@@ -36,7 +36,9 @@
 				<x-nav-link :href="route('login')">Log in</x-nav-link>
 				
 				@if (Route::has('register'))
+				@if(!\App\Models\User::exists())
 				<x-nav-link :href="route('register')">Register</x-nav-link>
+				@endif
 				@endif
 				@endauth
 				

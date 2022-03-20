@@ -10,30 +10,31 @@ Aplikasi ini merupakan project Sistem Pakar dengan sekumpulan metode di dalamnya
 1. Download aplikasi local server yang mendukung PHP versi 8.0 seperti [XAMPP](https://www.apachefriends.org/download.html) atau [WAMP Server](https://www.wampserver.com/en/download-wampserver-64bits/) untuk sistem operasi Windows.
 
 2. Download dan install [Composer](https://getcomposer.org/Composer-Setup.exe).
-3. Restart komputer.
-4. Jalankan aplikasi XAMPP Control Panel, klik tombol RUN untuk Apache dan MySQL.
-5. Jalankan aplikasi Command Prompt (CMD), ketik perintah berikut untuk pindah ke drive D:
+3. Download dan install [Node JS](https://nodejs.org/en/download/).
+4. Restart komputer.
+5. Jalankan aplikasi XAMPP Control Panel, klik tombol RUN untuk Apache dan MySQL.
+6. Jalankan aplikasi Command Prompt (CMD), ketik perintah berikut untuk pindah ke drive D:
 
 ```
 D:
 ```
 
-6. Download dan ekstrak project ini pada drive D komputer.
-7. Ketik perintah berikut pada CMD untuk masuk ke direktori project:
+7. Download dan ekstrak project ini pada drive D komputer.
+8. Ketik perintah berikut pada CMD untuk masuk ke direktori project:
 
 ```
 cd sistem-pakar
 ```
 
-8. Ketik perintah berikut pada CMD untuk melakukan instalasi paket-paket vendor Laravel:
+9. Ketik perintah berikut pada CMD untuk melakukan instalasi paket-paket vendor Laravel:
 
 ```
 composer install
 ```
 
-9. Buka web browser, ketikkan alamat [http://localhost/phpmyadmin](http://localhost/phpmyadmin) lalu buat database baru dengan nama `pakar`.
-10. Buka folder project `sistem-pakar` pada aplikasi Text Editor [Visual Studio Code](https://code.visualstudio.com/Download) atau [Sublime Text](https://www.sublimetext.com/download).
-11. Ubah nama (rename) file `.env.example` menjadi `.env` lalu edit bagian database seperti berikut:
+10. Buka web browser, ketikkan alamat [http://localhost/phpmyadmin](http://localhost/phpmyadmin) lalu buat database baru dengan nama `pakar`.
+11. Buka folder project `sistem-pakar` pada aplikasi Text Editor [Visual Studio Code](https://code.visualstudio.com/Download) atau [Sublime Text](https://www.sublimetext.com/download).
+12. Ubah nama (rename) file `.env.example` menjadi `.env` lalu edit bagian database seperti berikut:
 
 ```
 DB_CONNECTION=mysql
@@ -44,7 +45,7 @@ DB_USERNAME=root
 DB_PASSWORD=
 ```
 
-12. Ketik perintah berikut pada CMD untuk melakukan instalasi Laravel Breeze (fitur login dan register) serta migrasi tabel user menuju database:
+13. Ketik perintah berikut pada CMD untuk melakukan instalasi Laravel Breeze (fitur login dan register) serta migrasi tabel user menuju database:
 
 ```
 php artisan breeze:install
@@ -52,13 +53,13 @@ npm install && npm run dev
 php artisan migrate
 ```
 
-13. Ketik perintah berikut pada CMD untuk menjalankan server:
+14. Ketik perintah berikut pada CMD untuk menjalankan server:
 
 ```
 php artisan serve
 ```
 
-14. Ketik alamat yang tampil pada CMD menuju web browser untuk melihat tampilan aplikasi ini.
+15. Ketik alamat yang tampil pada CMD menuju web browser untuk melihat tampilan aplikasi ini.
 
 ## Author
 

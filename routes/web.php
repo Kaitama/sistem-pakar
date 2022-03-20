@@ -1,18 +1,20 @@
 <?php
 
 use App\Http\Controllers\GejalacfController;
+use App\Http\Controllers\KonsultasicfController;
+use App\Http\Controllers\NilaicfuserController;
 use App\Http\Controllers\PenyakitController;
 use App\Http\Controllers\RulebaseController;
+use App\Models\Nilaicfuser;
 use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function () {
-	return view('welcome');
+	return view('halaman-depan');
 })->name('homepage');
 
-Route::get('/konsultasi/cf', function () {
-	return view('konsultasi.cf');
-})->name('konsultasi.cf');
+Route::get('/konsultasi/cf', [KonsultasicfController::class, 'index'])->name('konsultasi.cf');
+Route::post('/konsultasi/cf/proses', [KonsultasicfController::class, 'proses'])->name('konsultasi.cf.proses');
 
 
 // bagian route khusus untuk akses yang sudah login
@@ -66,6 +68,10 @@ Route::middleware(['auth'])->prefix('dashboard')->group(function () {
 		->name('rule.cf.index');
 	Route::post('/rule/cf/sync', [RulebaseController::class, 'sync'])
 		->name('rule.cf.sync');
+	Route::post('/rule/cfuser/store', [NilaicfuserController::class, 'store'])
+		->name('cfuser.store');
+	Route::get('/rule/cfuser/delete/{id}', [NilaicfuserController::class, 'destroy'])
+		->name('cfuser.delete');
 
 	// akhir dari login akses
 });

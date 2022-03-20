@@ -35,7 +35,7 @@
 						<x-td>{{ $penyakit->solusi }}</x-td>
 						<x-td>
 							<x-button-link href="{{ route('penyakit.edit', $penyakit->id) }}">Ubah</x-button-link>
-							<x-button-link class="bg-rose-600 text-white" href="{{ route('penyakit.delete', $penyakit->id) }}">Hapus</x-button-link>
+							<x-button-link class="bg-red-600 text-white" href="{{ route('penyakit.delete', $penyakit->id) }}">Hapus</x-button-link>
 						</x-td>
 					</tr>
 					@empty

@@ -35,7 +35,7 @@
 						<x-td>{{ number_format($gejala->bobot, 3) }}</x-td>
 						<x-td>
 							<x-button-link href="{{ route('gejala.cf.edit', $gejala->id) }}">Ubah</x-button-link>
-							<x-button-link class="bg-rose-600 text-white" href="{{ route('gejala.cf.delete', $gejala->id) }}">Hapus</x-button-link>
+							<x-button-link class="bg-red-600 text-white" href="{{ route('gejala.cf.delete', $gejala->id) }}">Hapus</x-button-link>
 						</x-td>
 					</tr>
 					@empty
