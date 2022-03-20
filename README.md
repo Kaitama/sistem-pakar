@@ -5,6 +5,10 @@ Aplikasi ini merupakan project Sistem Pakar dengan sekumpulan metode di dalamnya
 -   [STMIK Triguna Dharma](https://www.trigunadharma.ac.id).
 -   [Khairi Ibnutama, S.Kom., M.Kom](https://kaitama.dev).
 
+## Metode yang Tersedia
+
+1. Certainty Factor (done).
+
 ## Instalasi
 
 1. Download aplikasi local server yang mendukung PHP versi 8.0 seperti [XAMPP](https://www.apachefriends.org/download.html) atau [WAMP Server](https://www.wampserver.com/en/download-wampserver-64bits/) untuk sistem operasi Windows.
