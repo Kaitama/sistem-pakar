@@ -16,14 +16,6 @@
 						{{ __('Dashboard') }}
 					</x-nav-link>
 				</div>
-
-				<div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-					<x-nav-link :href="route('konsultasi.cf')">
-						{{ __('Konsultasi') }}
-					</x-nav-link>
-				</div>
-
-
 				
 				<!-- Penyakit Links -->
 				<div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
@@ -31,6 +23,7 @@
 						{{ __('Data Penyakit') }}
 					</x-nav-link>
 				</div>
+				@if(config('app.metode') == 1)
 				<!-- Gejala CF Links -->
 				<div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
 					<x-nav-link :href="route('gejala.cf.index')" :active="request()->routeIs('gejala.cf.*')">
@@ -43,6 +36,13 @@
 						{{ __('Rule Base') }}
 					</x-nav-link>
 				</div>
+				<!-- Konsultasi CF -->
+				<div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+					<x-nav-link :href="route('konsultasi.cf')">
+						{{ __('Konsultasi') }}
+					</x-nav-link>
+				</div>
+				@endif
 				
 				
 			</div>

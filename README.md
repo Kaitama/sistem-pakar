@@ -3,7 +3,7 @@
 Aplikasi ini merupakan project Sistem Pakar dengan sekumpulan metode di dalamnya. Aplikasi ini dirancang untuk memenuhi pembelajaran Peminatan Program Skripsi di STMIK Triguna Dharma. Aplikasi ini dapat diunduh secara bebas dan digunakan siapapun dengan ketentuan untuk TIDAK MEMPERJUAL-BELIKAN dalam bentuk apapun.
 
 -   [STMIK Triguna Dharma](https://www.trigunadharma.ac.id).
--   [Khairi Ibnutama, S.Kom., M.Kom](https://kaitama.dev).
+-   [Laravel](https://laravel.com).
 
 ## Metode yang Tersedia
 
@@ -57,7 +57,9 @@ npm install && npm run dev
 php artisan migrate
 ```
 
-14. Ketik perintah berikut pada CMD untuk menjalankan server:
+14. Buka file `config/app.php` lalu ubah pilihan `metode` sesuai pilihan.
+
+15. Ketik perintah berikut pada CMD untuk menjalankan server:
 
 ```
 php artisan serve
