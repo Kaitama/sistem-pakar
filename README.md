@@ -65,7 +65,7 @@ php artisan migrate
 php artisan serve
 ```
 
-15. Ketik alamat yang tampil pada CMD menuju web browser untuk melihat tampilan aplikasi ini.
+16. Ketik alamat yang tampil pada CMD menuju web browser untuk melihat tampilan aplikasi ini.
 
 ## Author
 
