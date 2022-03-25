@@ -14,8 +14,9 @@ Aplikasi ini merupakan project Sistem Pakar dengan sekumpulan metode di dalamnya
 
 ## Instalasi
 
-1. Download aplikasi local server yang mendukung PHP versi 8.0 seperti [XAMPP](https://www.apachefriends.org/download.html) atau [WAMP Server](https://www.wampserver.com/en/download-wampserver-64bits/) untuk sistem operasi Windows.
+> Tonton video ini sebagai panduan instalasi [Youtube](https://www.youtube.com/watch?v=2KX-QOIenZM). Video ini bukan dari saya dan langkah-langkahnya tidak sama persis, tetapi cukup jelas untuk dijadikan panduan tahapan instalasi yang disebutkan di bawah.
 
+1. Download aplikasi local server yang mendukung PHP versi 8.0 seperti [XAMPP](https://www.apachefriends.org/download.html) atau [WAMP Server](https://www.wampserver.com/en/download-wampserver-64bits/) untuk sistem operasi Windows.
 2. Download dan install [Composer](https://getcomposer.org/Composer-Setup.exe).
 3. Download dan install [Node JS](https://nodejs.org/en/download/).
 4. Restart komputer.
@@ -29,7 +30,7 @@ Aplikasi ini merupakan project Sistem Pakar dengan sekumpulan metode di dalamnya
 composer update
 ```
 
-10. Buka web browser, ketikkan alamat [http://localhost/phpmyadmin](http://localhost/phpmyadmin) lalu buat database baru dengan nama `pakar`.
+10. Buka **_Google Chrome_**, ketikkan alamat [http://localhost/phpmyadmin](http://localhost/phpmyadmin) lalu buat database baru dengan nama `pakar`.
 11. Buka folder project `sistem-pakar` pada aplikasi Text Editor [Visual Studio Code](https://code.visualstudio.com/Download) atau [Sublime Text](https://www.sublimetext.com/download).
 12. Ubah nama (rename) file `.env.example` menjadi `.env` lalu edit bagian database seperti berikut:
 
@@ -52,10 +53,10 @@ php artisan migrate
 ```
 
 14. Buka file `config/app.php` lalu ubah pilihan `metode` sesuai pilihan.
-
 15. Ketik perintah berikut pada terminal **Visual Studio Code** untuk menjalankan server:
 
 ```
+php artisan key:generate
 php artisan serve
 ```
 
