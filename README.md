@@ -31,8 +31,7 @@ composer install
 ```
 
 10. Buka **Google Chrome**, ketikkan alamat [http://localhost/phpmyadmin](http://localhost/phpmyadmin) lalu buat database baru dengan nama `pakar`.
-11. Buka folder project `sistem-pakar` pada aplikasi Text Editor [Visual Studio Code](https://code.visualstudio.com/Download) atau [Sublime Text](https://www.sublimetext.com/download).
-12. Ubah nama (rename) file `.env.example` menjadi `.env` lalu edit bagian database seperti berikut:
+11. Buka kembali aplikasi **Visual Studio Code**. Ubah nama (_rename_) file `.env.example` menjadi `.env` lalu edit bagian database seperti berikut:
 
 ```
 DB_CONNECTION=mysql
@@ -43,7 +42,7 @@ DB_USERNAME=root
 DB_PASSWORD=
 ```
 
-13. Ketik perintah berikut pada terminal **Visual Studio Code** untuk melakukan instalasi Laravel Breeze (fitur login dan register) serta migrasi tabel user menuju database:
+12. Ketik perintah berikut pada terminal **Visual Studio Code** untuk melakukan instalasi Laravel Breeze (fitur login dan register) serta migrasi tabel user menuju database:
 
 ```
 php artisan breeze:install
@@ -52,15 +51,15 @@ npm run dev
 php artisan migrate
 ```
 
-14. Buka file `config/app.php` lalu ubah pilihan `metode` sesuai pilihan.
-15. Ketik perintah berikut pada terminal **Visual Studio Code** untuk menjalankan server:
+13. Buka file `config/app.php` lalu ubah pilihan `metode` sesuai pilihan.
+14. Ketik perintah berikut pada terminal **Visual Studio Code** untuk menjalankan server:
 
 ```
 php artisan key:generate
 php artisan serve
 ```
 
-16. Ketik alamat url (biasanya [http://127.0.0.1:8000](http://127.0.0.1:8000)) yang tampil pada terminal menuju web browser untuk melihat tampilan aplikasi ini.
+15. Ketik alamat url (biasanya [http://127.0.0.1:8000](http://127.0.0.1:8000)) yang tampil pada terminal menuju web browser untuk melihat tampilan aplikasi ini.
 
 ## Author
 
