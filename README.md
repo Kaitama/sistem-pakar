@@ -1,6 +1,6 @@
 ## Tentang Aplikasi
 
-Aplikasi ini merupakan project Sistem Pakar dengan sekumpulan metode di dalamnya. Aplikasi ini dirancang untuk memenuhi pembelajaran Peminatan Program Skripsi di STMIK Triguna Dharma. Aplikasi ini dapat diunduh secara bebas dan digunakan siapapun dengan ketentuan untuk TIDAK MEMPERJUAL-BELIKAN dalam bentuk apapun.
+Aplikasi ini merupakan project Sistem Pakar dengan sekumpulan metode di dalamnya. Aplikasi ini dirancang untuk memenuhi pembelajaran Peminatan Program Skripsi di [STMIK Triguna Dharma](https://www.trigunadharma.ac.id). Aplikasi ini dapat diunduh secara bebas, digunakan, dan dimodifikasi sesuai kebutuhan siapapun dengan ketentuan untuk **TIDAK MEMPERJUAL-BELIKAN** dalam bentuk apapun.
 
 -   [STMIK Triguna Dharma](https://www.trigunadharma.ac.id).
 -   [Laravel](https://laravel.com).
@@ -14,7 +14,7 @@ Aplikasi ini merupakan project Sistem Pakar dengan sekumpulan metode di dalamnya
 
 ## Instalasi
 
-> Tonton video ini sebagai panduan instalasi [Youtube](https://www.youtube.com/watch?v=2KX-QOIenZM). Video ini bukan dari saya dan langkah-langkahnya tidak sama persis, tetapi cukup jelas untuk dijadikan panduan tahapan instalasi yang disebutkan di bawah.
+> Tonton video berikut sebagai panduan instalasi: [Youtube Video](https://www.youtube.com/watch?v=2KX-QOIenZM). Video ini bukan dari saya dan langkah-langkahnya tidak sama persis, tetapi cukup jelas untuk dijadikan panduan tahapan instalasi yang disebutkan di bawah.
 
 1. Download aplikasi local server yang mendukung PHP versi 8.0 seperti [XAMPP](https://www.apachefriends.org/download.html) atau [WAMP Server](https://www.wampserver.com/en/download-wampserver-64bits/) untuk sistem operasi Windows.
 2. Download dan install [Composer](https://getcomposer.org/Composer-Setup.exe).
@@ -27,7 +27,7 @@ Aplikasi ini merupakan project Sistem Pakar dengan sekumpulan metode di dalamnya
 9. Pilih menu `Terminal` -> `New Terminal` pada aplikasi **Visual Studio Code** lalu ketik perintah berikut untuk melakukan instalasi paket-paket vendor Laravel:
 
 ```
-composer update
+composer install
 ```
 
 10. Buka **_Google Chrome_**, ketikkan alamat [http://localhost/phpmyadmin](http://localhost/phpmyadmin) lalu buat database baru dengan nama `pakar`.
@@ -60,7 +60,7 @@ php artisan key:generate
 php artisan serve
 ```
 
-16. Ketik alamat url (biasanya `http://127.0.0.1:8000`) yang tampil pada terminal menuju web browser untuk melihat tampilan aplikasi ini.
+16. Ketik alamat url (biasanya [http://127.0.0.1:8000](http://127.0.0.1:8000)) yang tampil pada terminal menuju web browser untuk melihat tampilan aplikasi ini.
 
 ## Author
 
