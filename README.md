@@ -8,7 +8,7 @@ Aplikasi ini merupakan project Sistem Pakar dengan sekumpulan metode di dalamnya
 
 ## Metode yang Tersedia
 
--   [x] Certainty Factor :white_check_mark:
+-   [x] Certainty Factor :tada:
 -   [ ] Teorema Bayes
 -   [ ] Dempster Shafer
 
