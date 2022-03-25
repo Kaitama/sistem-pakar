@@ -12,6 +12,10 @@ Aplikasi ini merupakan project Sistem Pakar dengan sekumpulan metode di dalamnya
 -   [ ] Teorema Bayes
 -   [ ] Dempster Shafer
 
+## Disclaimer
+
+> Aplikasi ini tidak disertakan fitur validasi input, disain tampilan halaman yang sesuai studi kasus, ataupun fitur ubah data user. Mahasiswa dituntut untuk dapat mempelajari sendiri dan menerapkan fitur tersebut sesuai dengan kebutuhan skripsinya.
+
 ## Instalasi
 
 > Tonton video berikut sebagai panduan instalasi: [Youtube Video](https://www.youtube.com/watch?v=2KX-QOIenZM). Video ini bukan dari saya dan langkah-langkahnya tidak sama persis, tetapi cukup jelas untuk dijadikan panduan tahapan instalasi yang disebutkan di bawah.
