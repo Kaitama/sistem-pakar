@@ -16,4 +16,9 @@ class Penyakit extends Model
 	{
 		return $this->belongsToMany(Gejalacf::class);
 	}
+
+	public function prosescfs()
+	{
+		return $this->belongsToMany(Prosescf::class)->withPivot('percentage');
+	}
 }

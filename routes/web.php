@@ -4,6 +4,7 @@ use App\Http\Controllers\GejalacfController;
 use App\Http\Controllers\KonsultasicfController;
 use App\Http\Controllers\NilaicfuserController;
 use App\Http\Controllers\PenyakitController;
+use App\Http\Controllers\ReportcfController;
 use App\Http\Controllers\RulebaseController;
 use App\Models\Nilaicfuser;
 use Illuminate\Support\Facades\Route;
@@ -72,6 +73,10 @@ Route::middleware(['auth'])->prefix('dashboard')->group(function () {
 		->name('cfuser.store');
 	Route::get('/rule/cfuser/delete/{id}', [NilaicfuserController::class, 'destroy'])
 		->name('cfuser.delete');
+
+	// reports
+	Route::get('/report/cf', [ReportcfController::class, 'index'])
+		->name('reports.cf');
 
 	// akhir dari login akses
 });

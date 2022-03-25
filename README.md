@@ -4,10 +4,13 @@ Aplikasi ini merupakan project Sistem Pakar dengan sekumpulan metode di dalamnya
 
 -   [STMIK Triguna Dharma](https://www.trigunadharma.ac.id).
 -   [Laravel](https://laravel.com).
+-   [Tailwindcss](https://tailwindcss.com/).
 
 ## Metode yang Tersedia
 
-1. Certainty Factor (done).
+[x] Certainty Factor
+[ ] Teorema Bayes
+[ ] Dempster Shafer
 
 ## Instalasi
 
@@ -16,24 +19,14 @@ Aplikasi ini merupakan project Sistem Pakar dengan sekumpulan metode di dalamnya
 2. Download dan install [Composer](https://getcomposer.org/Composer-Setup.exe).
 3. Download dan install [Node JS](https://nodejs.org/en/download/).
 4. Restart komputer.
-5. Jalankan aplikasi XAMPP Control Panel, klik tombol RUN untuk Apache dan MySQL.
-6. Jalankan aplikasi Command Prompt (CMD), ketik perintah berikut untuk pindah ke drive D:
-
-```
-D:
-```
-
+5. Jalankan aplikasi **XAMPP Control Panel**, klik tombol `RUN` untuk Apache dan MySQL.
+6. Download dan install [Visual Studio Code](https://code.visualstudio.com/Download).
 7. Download dan ekstrak project ini pada drive D komputer, rename folder hasil ekstrak menjadi `sistem-pakar`.
-8. Ketik perintah berikut pada CMD untuk masuk ke direktori project:
+8. Jalankan aplikasi **Visual Studio Code**, pilih menu `File` -> `Open Folder` lalu pilih folder `sistem-pakar` hasil download sebelumnya.
+9. Pilih menu `Terminal` -> `New Terminal` pada aplikasi **Visual Studio Code** lalu ketik perintah berikut untuk melakukan instalasi paket-paket vendor Laravel:
 
 ```
-cd sistem-pakar
-```
-
-9. Ketik perintah berikut pada CMD untuk melakukan instalasi paket-paket vendor Laravel:
-
-```
-composer install
+composer update
 ```
 
 10. Buka web browser, ketikkan alamat [http://localhost/phpmyadmin](http://localhost/phpmyadmin) lalu buat database baru dengan nama `pakar`.
@@ -49,23 +42,24 @@ DB_USERNAME=root
 DB_PASSWORD=
 ```
 
-13. Ketik perintah berikut pada CMD untuk melakukan instalasi Laravel Breeze (fitur login dan register) serta migrasi tabel user menuju database:
+13. Ketik perintah berikut pada terminal **Visual Studio Code** untuk melakukan instalasi Laravel Breeze (fitur login dan register) serta migrasi tabel user menuju database:
 
 ```
 php artisan breeze:install
-npm install && npm run dev
+npm install
+npm run dev
 php artisan migrate
 ```
 
 14. Buka file `config/app.php` lalu ubah pilihan `metode` sesuai pilihan.
 
-15. Ketik perintah berikut pada CMD untuk menjalankan server:
+15. Ketik perintah berikut pada terminal **Visual Studio Code** untuk menjalankan server:
 
 ```
 php artisan serve
 ```
 
-16. Ketik alamat yang tampil pada CMD menuju web browser untuk melihat tampilan aplikasi ini.
+16. Ketik alamat url (biasanya `http://127.0.0.1:8000`) yang tampil pada terminal menuju web browser untuk melihat tampilan aplikasi ini.
 
 ## Author
 

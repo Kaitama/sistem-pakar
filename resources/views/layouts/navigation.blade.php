@@ -38,6 +38,12 @@
 				</div>
 				<!-- Konsultasi CF -->
 				<div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+					<x-nav-link :href="route('reports.cf')" :active="request()->routeIs('reports.cf')">
+						{{ __('Laporan') }}
+					</x-nav-link>
+				</div>
+				<!-- Konsultasi CF -->
+				<div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
 					<x-nav-link :href="route('konsultasi.cf')">
 						{{ __('Konsultasi') }}
 					</x-nav-link>
