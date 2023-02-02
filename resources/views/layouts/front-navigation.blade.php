@@ -18,9 +18,21 @@
 				</div>
 				<!-- Navigation Links -->
 				<div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-					<x-nav-link :href="route('konsultasi.cf')" :active="request()->routeIs('konsultasi.*')">
-						{{ __('Konsultasi') }}
-					</x-nav-link>
+					@switch(config('app.metode'))
+							@case(1)
+							<x-nav-link :href="route('konsultasi.cf')" :active="request()->routeIs('konsultasi.*')">
+								{{ __('Konsultasi') }}
+							</x-nav-link>
+									@break
+							@case(2)
+							<x-nav-link :href="route('konsultasi.tb')" :active="request()->routeIs('konsultasi.*')">
+								{{ __('Konsultasi') }}
+							</x-nav-link>
+									@break
+							@default
+									
+					@endswitch
+					
 				</div>
 				
 				

@@ -21,4 +21,15 @@ class Penyakit extends Model
 	{
 		return $this->belongsToMany(Prosescf::class)->withPivot('percentage');
 	}
+
+	// relasi many-to many ke tabel gejalatb
+	public function gejalatbs()
+	{
+		return $this->belongsToMany(Gejalatb::class);
+	}
+
+	public function prosestbs()
+	{
+		return $this->belongsToMany(Prosestb::class)->withPivot('percentage');
+	}
 }

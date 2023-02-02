@@ -9,7 +9,7 @@ Aplikasi ini merupakan project Sistem Pakar dengan sekumpulan metode di dalamnya
 ## Metode yang Tersedia
 
 -   [x] Certainty Factor :tada:
--   [ ] Teorema Bayes
+-   [x] Teorema Bayes :tada:
 -   [ ] Dempster Shafer
 
 ## Disclaimer

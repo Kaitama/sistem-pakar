@@ -15,7 +15,7 @@
 						<div class="mt-2">
 							<x-label for="kode" :value="__('Kode Penyakit')" />
 							
-							<x-input id="kode" class="block mt-1 w-full" type="text" name="kode" :value="old('kode')" value="{{ $kode }}" readonly />
+							<x-input id="kode" class="block mt-1 w-full" type="text" name="kode" :value="old('kode')" value="{{ $kode }}" />
 						</div>
 						
 						<div class="mt-2">

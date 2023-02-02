@@ -13,7 +13,7 @@ class GejalacfController extends Controller
 
 	public function index()
 	{
-		$gejalacsf = Gejalacf::with('penyakits')->get();
+		$gejalacsf = Gejalacf::orderBy('kode')->with('penyakits')->get();
 
 		return view('dashboard.gejalacf.index', ['gejalacfs' => $gejalacsf]);
 	}
@@ -21,8 +21,10 @@ class GejalacfController extends Controller
 	public function create()
 	{
 
-		$gejala = Gejalacf::latest()->first();
-		$index_baru = ($gejala->id ?? 0) + 1;
+		$gejala = Gejalacf::orderByDesc('kode')->first();
+
+		$last_kode = substr($gejala->kode ?? '', -3);
+		$index_baru = ((int) $last_kode) + 1;
 
 		$kode_gejala = 'G' . str_pad($index_baru, 3, '0', STR_PAD_LEFT);
 

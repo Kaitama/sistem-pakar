@@ -11,11 +11,11 @@ return [
     |
     | Ubah value dari pengaturan ini untuk pilihan metode sebagai berikut:
     | 1. Certainty Factor
-    | 2. xxxx
+    | 2. Teorema Bayes
     |
     */
 
-	'metode'	=> 1,
+	'metode'	=> 2,
 
 	/*
     |--------------------------------------------------------------------------

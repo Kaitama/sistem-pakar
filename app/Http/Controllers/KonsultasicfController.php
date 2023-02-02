@@ -93,6 +93,6 @@ class KonsultasicfController extends Controller
 
 
 		// dd($hasil_akhir);
-		return view('konsultasi.cf-hasil', ['hasil' => $hasil_akhir]);
+		return view('konsultasi.hasil', ['hasil' => $hasil_akhir, 'pasien' => $proses]);
 	}
 }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Penyakit;
 use App\Models\Prosescf;
+use App\Models\Prosestb;
 use Illuminate\Http\Request;
 
 class ReportcfController extends Controller
@@ -17,8 +18,18 @@ class ReportcfController extends Controller
 	{
 		//
 		$penyakits = Penyakit::orderBy('kode')->get();
-		$reports = Prosescf::latest()->with('penyakits')->get();
-		return view('dashboard.reports.cf', ['reports' => $reports, 'penyakits' => $penyakits]);
+		switch (config('app.metode')) {
+			case 1:
+				$reports = Prosescf::latest()->with('penyakits')->get();
+				break;
+			case 2:
+				$reports = Prosestb::latest()->with('penyakits')->get();
+				break;
+			default:
+				$reports = null;
+				break;
+		}
+		return view('dashboard.reports.index', ['reports' => $reports, 'penyakits' => $penyakits]);
 	}
 
 	/**

@@ -23,7 +23,9 @@
 						{{ __('Data Penyakit') }}
 					</x-nav-link>
 				</div>
-				@if(config('app.metode') == 1)
+				
+				@switch(config('app.metode'))
+				@case(1)
 				<!-- Gejala CF Links -->
 				<div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
 					<x-nav-link :href="route('gejala.cf.index')" :active="request()->routeIs('gejala.cf.*')">
@@ -36,19 +38,44 @@
 						{{ __('Rule Base') }}
 					</x-nav-link>
 				</div>
-				<!-- Konsultasi CF -->
-				<div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-					<x-nav-link :href="route('reports.cf')" :active="request()->routeIs('reports.cf')">
-						{{ __('Laporan') }}
-					</x-nav-link>
-				</div>
+				
 				<!-- Konsultasi CF -->
 				<div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
 					<x-nav-link :href="route('konsultasi.cf')">
 						{{ __('Konsultasi') }}
 					</x-nav-link>
 				</div>
-				@endif
+				@break
+				@case(2)
+				<!-- Gejala TB Links -->
+				<div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+					<x-nav-link :href="route('gejala.tb.index')" :active="request()->routeIs('gejala.tb.*')">
+						{{ __('Data Gejala') }}
+					</x-nav-link>
+				</div>
+				<!-- Rule TB Links -->
+				<div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+					<x-nav-link :href="route('rule.tb.index')" :active="request()->routeIs('rule.tb.*')">
+						{{ __('Rule Base') }}
+					</x-nav-link>
+				</div>
+				<!-- Konsultasi TB -->
+				<div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+					<x-nav-link :href="route('konsultasi.tb')">
+						{{ __('Konsultasi') }}
+					</x-nav-link>
+				</div>
+				@break
+				@default
+				
+				@endswitch
+				
+				
+				<div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+					<x-nav-link :href="route('reports.index')" :active="request()->routeIs('reports.index')">
+						{{ __('Laporan') }}
+					</x-nav-link>
+				</div>
 				
 				
 			</div>
